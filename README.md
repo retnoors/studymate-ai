@@ -16,7 +16,7 @@ menjelaskan materi pelajaran, membuat quiz latihan, dan merangkum diskusi belaja
 | **Fokus materi** | Umum, Matematika, Bahasa Inggris, Sains, Sejarah, atau Pemrograman |
 | **Temperature** | Slider 0.0–1.0 untuk mengatur tingkat kreativitas/variasi jawaban |
 | **Memory** | Riwayat percakapan disimpan lewat `st.session_state` + Gemini chat session, jadi bot ingat konteks sebelumnya |
-| **Integrasi API eksternal** | Tool `cari_wikipedia()` — Gemini otomatis memanggil Wikipedia API saat user menanyakan fakta/definisi/tokoh, sehingga jawaban berbasis referensi nyata, bukan sekadar tebakan model |
+| **Integrasi API eksternal** | Tool `cari_referensi_akademik()` menggunakan Crossref API untuk mencari hingga 3 referensi akademik yang relevan berdasarkan topik pertanyaan |
 | **Fitur tambahan** | Tombol aksi cepat: "Jelaskan lebih sederhana", "Buatkan quiz", "Rangkum percakapan" |
 
 ## Struktur Proyek
@@ -35,17 +35,17 @@ menjelaskan materi pelajaran, membuat quiz latihan, dan merangkum diskusi belaja
 ### 1. Lokal
 
 ```bash
-git clone <URL_REPO_KAMU>
-cd <nama-folder>
+git clone https://github.com/retnoors/studymate-ai.git
+cd studymate-ai
 pip install -r requirements.txt
 ```
 
-**(Opsional, biar gak perlu ketik API key tiap run)** — copy `.env.example` jadi `.env`,
+**(Opsional, agar tidak perlu mengetik API key tiap run)** — copy `.env.example` jadi `.env`,
 lalu isi dengan API key kamu:
 
 ```bash
-cp .env.example .env
-# lalu edit .env, isi GOOGLE_API_KEY=key_asli_kamu
+Copy file `.env.example` menjadi `.env`, lalu isi dengan API key kamu:
+GOOGLE_API_KEY=key_asli_kamu
 ```
 
 File `.env` sudah masuk `.gitignore`, jadi key kamu **tidak akan ikut ter-push** ke GitHub.
@@ -74,26 +74,8 @@ Setelah live, kamu tinggal masukkan API key di sidebar app yang online itu — t
 2. Klik **Get API Key** → **Create API Key**
 3. Copy key-nya dan paste ke kotak "Google AI API Key" di sidebar app
 
-## Cara Push ke GitHub (untuk deliverable URL repositori)
-
-```bash
-git init
-git add .
-git commit -m "Final project: StudyMate AI chatbot"
-git branch -M main
-git remote add origin https://github.com/<username-kamu>/studymate-ai.git
-git push -u origin main
-```
-
 ## Screenshot
 
-*(Tambahkan screenshot UI aplikasi kamu di sini setelah dijalankan — sidebar
-pengaturan, contoh percakapan, dan hasil fitur "Buatkan quiz")*
+<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/2b76f015-7a96-43ad-aac5-e32fcaf3455a" />
 
-## Kredit
 
-Dibangun berdasarkan materi pelatihan:
-- Sesi 1: Gemini Part 1 (instalasi, generate_content, chat session)
-- Sesi 2: RAG dengan LangChain & LangGraph
-- Sesi 3: Streamlit for Chatbot (session_state, st.chat_message)
-- Sesi 4: AI Agents dengan LangGraph
