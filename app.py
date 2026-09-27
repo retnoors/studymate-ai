@@ -156,7 +156,7 @@ if ("genai_client" not in st.session_state) or (st.session_state.get("_config_ke
         st.session_state.genai_client = genai.Client(api_key=google_api_key)
         st.session_state._config_key = config_key
         st.session_state.chat = st.session_state.genai_client.chats.create(
-            model="gemini-3.7-flash",
+            model="gemini-3.8-flash",
             config={
                 "system_instruction": SYSTEM_INSTRUCTION,
                 "temperature": kreativitas,
