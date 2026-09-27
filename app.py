@@ -109,7 +109,7 @@ with st.sidebar:
     reset_button = st.button("Reset Percakapan", help="Hapus riwayat chat dan mulai dari awal")
 
     st.markdown("---")
-    st.caption("🔎 Terintegrasi dengan Wikipedia API untuk jawaban berbasis fakta")
+    st.caption("Terintegrasi dengan Crossref API untuk referensi akademik yang kredibel")
 
 # ── 3. Validasi API Key ───────────────────────────────────────────────────
 if not google_api_key:
