@@ -75,7 +75,7 @@ Setelah live, kamu tinggal masukkan API key di sidebar app yang online itu — t
 3. Copy key-nya dan paste ke kotak "Google AI API Key" di sidebar app
 
 ## Screenshot
+<img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/614fcd26-2920-476c-b8d9-e9fe5dabd564" />
 
-<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/2b76f015-7a96-43ad-aac5-e32fcaf3455a" />
 
 
